@@ -1,0 +1,22 @@
+<table class="tableListScheme1">
+  <tr>
+    <th>Symbol</th>
+    <th>Name</th>
+    <th>Base price</th>
+    <th>Price</th>
+    <th>Bid size</th>
+    <th>Bid price</th>
+    <th>Ask size</th>
+    <th>Ask price</th>
+  </tr>
+  <tr *ngFor="let stock of searchedStocks">
+    <td class="ctr">{{ stock.Symbol }}</td>
+    <td class="ctr">{{ stock.Name }}</td>
+    <td class="ctr">{{ stock.BasePrice }}</td>
+    <td class="ctr">{{ stock.Price }}</td>
+    <td class="ctr">{{ stock.BidSize }}</td>
+    <td class="ctr">{{ stock.Bid }}</td>
+    <td class="ctr">{{ stock.AskSize }}</td>
+    <td class="ctr">{{ stock.Ask }}</td>
+  </tr>
+</table>

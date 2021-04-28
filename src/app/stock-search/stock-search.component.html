@@ -1,0 +1,20 @@
+<div>
+  <datalist id="stocks">
+    <option *ngFor="let symbol of symbols" [value]="symbol.Name"></option>
+  </datalist>
+  <select id="stocks" (change)="chooseStock($event.target.value)">
+    <option *ngFor="let symbol of symbols" value="{{ symbol.Symbol }}">
+      {{ symbol.Name }}
+    </option>
+  </select>
+  <label>
+    Search:
+    <input
+      type="search"
+      [(ngModel)]="currentSymbol"
+      (input)="searchSymbol()"
+      autoComplete="on"
+      list="stocks"
+    />
+  </label>
+</div>
