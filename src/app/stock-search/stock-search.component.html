@@ -1,7 +1,7 @@
 <div>
-  <datalist id="stocks">
+  <!-- <datalist id="stocks">
     <option *ngFor="let symbol of symbols" [value]="symbol.Name"></option>
-  </datalist>
+  </datalist> -->
   <select id="stocks" (change)="chooseStock($event.target.value)">
     <option *ngFor="let symbol of symbols" value="{{ symbol.Symbol }}">
       {{ symbol.Name }}

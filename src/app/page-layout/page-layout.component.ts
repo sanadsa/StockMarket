@@ -28,7 +28,7 @@ export class PageLayoutComponent implements OnInit {
       this.stockService
         .getStocksBySymbols(symbols, updateId)
         .subscribe((res) => {
-          if (res) this.stocks = res;
+          if (res[0]) this.stocks = res;
         });
     }, 500);
   }
